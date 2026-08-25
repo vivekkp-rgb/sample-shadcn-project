@@ -1,6 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Users, CalendarCheck, CheckSquare, TriangleAlert, Plus } from "lucide-react";
+import { TodaysAppointments } from "@/components/todays-appointments";
+import { ClinicalAlerts } from "@/components/clinical-alerts";
 
 export default function DashboardPage() {
   return (
@@ -13,7 +15,7 @@ export default function DashboardPage() {
             Here&apos;s your clinical overview for today.
           </p>
         </div>
-        <Button className="gap-1.5">
+        <Button className="gap-1.5 rounded-md">
           <Plus className="h-4 w-4" />
           New Patient
         </Button>
@@ -53,6 +55,14 @@ export default function DashboardPage() {
           iconBg="bg-[#FDE8E7]"
           subtitleColor="text-destructive"
         />
+      </div>
+      <div>
+          <TodaysAppointments/>
+        {/* <div className="flex ">
+        </div>
+        <div className="flex ">
+          <ClinicalAlerts/>
+        </div> */}
       </div>
 
       {/* TODO: Interns add the following sections:
