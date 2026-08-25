@@ -19,7 +19,7 @@ export function DashboardHeader() {
         </div>
 
         {/* Notification Bell */}
-        <Button variant="outline" size="icon" className="relative h-9 w-9">
+        <Button variant="outline" size="icon" className="relative h-10 w-10">
           <Bell className="h-[18px] w-[18px] text-muted-foreground" />
           <span className="absolute right-1.5 top-1.5 h-2 w-2 rounded-full border-2 border-card bg-destructive" />
         </Button>

@@ -36,8 +36,8 @@ export function AppSidebar() {
     <Sidebar className="border-r border-border">
       <SidebarHeader className="p-5 pb-6">
         <div className="flex items-center gap-2.5">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-            <Plus className="h-4 w-4 text-primary-foreground" />
+          <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary">
+            <Plus className="h-6 w-6 text-primary-foreground" />
           </div>
           <span className="text-base font-semibold">MediCare</span>
         </div>
@@ -70,11 +70,11 @@ export function AppSidebar() {
       <SidebarFooter className="p-0">
         <SidebarSeparator className="mx-0" />
         <div className="flex cursor-pointer items-center gap-2.5 p-4 hover:bg-muted">
-          <Avatar className="h-9 w-9">
-            <AvatarFallback className="bg-accent text-sm font-semibold text-accent-foreground">
-              DS
-            </AvatarFallback>
-          </Avatar>
+          <Avatar className="h-9 w-9 cursor-pointer">
+          <AvatarFallback className="bg-accent text-sm font-semibold text-accent-foreground">
+            DS
+          </AvatarFallback>
+        </Avatar>
           <div className="min-w-0 flex-1">
             <p className="text-sm font-medium">Dr. Sarah</p>
             <p className="text-xs text-muted-foreground">Cardiologist</p>
