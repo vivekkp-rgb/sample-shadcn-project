@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Users, CalendarCheck, CheckSquare, TriangleAlert, Plus } from "lucide-react";
 import { TodaysAppointments } from "@/components/todays-appointments";
 import { ClinicalAlerts } from "@/components/clinical-alerts";
+import { RecentPatients } from "@/components/recent-patients";
 
 export default function DashboardPage() {
   return (
@@ -56,14 +57,15 @@ export default function DashboardPage() {
           subtitleColor="text-destructive"
         />
       </div>
-      <div>
+      <div className="flex items-stretch gap-5 mb-6">
+        <div className="flex-[2.9]">
           <TodaysAppointments/>
-        {/* <div className="flex ">
         </div>
-        <div className="flex ">
+        <div className="flex-[1.1]">
           <ClinicalAlerts/>
-        </div> */}
+        </div>
       </div>
+      <RecentPatients/>
 
       {/* TODO: Interns add the following sections:
           - Today's Appointments table  (shadcn Table + Badge + Avatar)
@@ -95,7 +97,7 @@ function StatsCard({
   subtitleColor: string;
 }) {
   return (
-    <Card>
+    <Card className="rounded-xl">
       <CardContent className="p-5">
         <div className="mb-3 flex items-center justify-between">
           <span className="text-[13px] font-medium text-muted-foreground">
