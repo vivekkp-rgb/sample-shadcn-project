@@ -4,10 +4,12 @@ import { Users, CalendarCheck, CheckSquare, TriangleAlert, Plus } from "lucide-r
 import { TodaysAppointments } from "@/components/todays-appointments";
 import { ClinicalAlerts } from "@/components/clinical-alerts";
 import { RecentPatients } from "@/components/recent-patients";
+import { DashboardHeader } from "@/components/dashboard-header";
 
 export default function DashboardPage() {
   return (
     <div>
+      {/* <DashboardHeader title="Dashboard" /> */}
       {/* Welcome Section */}
       <div className="mb-6 flex items-center justify-between">
         <div>

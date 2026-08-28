@@ -136,7 +136,7 @@ export function TodaysAppointments() {
                         </AvatarFallback>
                     </Avatar>
 
-                    <span className="text-sm font-medium text-slate-900">
+                    <span className="text-sm font-medium  text-foreground">
                       {appointment.patient}
                     </span>
                   </div>
