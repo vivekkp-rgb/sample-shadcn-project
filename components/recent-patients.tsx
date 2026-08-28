@@ -139,7 +139,7 @@ export function RecentPatients() {
                       </AvatarFallback>
                     </Avatar>
 
-                    <span className="text-sm font-medium text-slate-900">
+                    <span className="text-sm font-medium text-foreground">
                       {recentPatient.patient}
                     </span>
                   </div>
