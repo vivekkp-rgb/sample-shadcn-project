@@ -45,6 +45,8 @@
     --radius-2xl: calc(var(--radius) * 1.8);
     --radius-3xl: calc(var(--radius) * 2.2);
     --radius-4xl: calc(var(--radius) * 2.6);
+    --color-back-button: var(--back-button);
+    --color-back-button-hover: var(--back-button-hover);
 }
 
 :root {
@@ -82,6 +84,8 @@
     --sidebar-accent-foreground: #5FB8A8;
     --sidebar-border: #E5EAEA;
     --sidebar-ring: #5FB8A8;
+    --back-button:rgb(95, 184, 168);
+    --back-button-hover:rgb(79, 166, 150);
 }
 
 .dark {

@@ -14,20 +14,12 @@ import {
 } from "@/components/ui/sidebar";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {
-  LayoutDashboard,
-  Users,
-  Calendar,
-  Settings,
   ChevronDown,
   Plus,
 } from "lucide-react";
+import { navItems } from "@/lib/navigation";
 
-const navItems = [
-  { title: "Dashboard", href: "/", icon: LayoutDashboard },
-  { title: "Patients", href: "/patients", icon: Users },
-  { title: "Appointments", href: "/appointments", icon: Calendar },
-  { title: "Settings", href: "/settings", icon: Settings },
-];
+
 
 export function AppSidebar() {
   const pathname = usePathname();

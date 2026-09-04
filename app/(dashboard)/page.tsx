@@ -4,7 +4,7 @@ import { Users, CalendarCheck, CheckSquare, TriangleAlert, Plus } from "lucide-r
 import { TodaysAppointments } from "@/components/todays-appointments";
 import { ClinicalAlerts } from "@/components/clinical-alerts";
 import { RecentPatients } from "@/components/recent-patients";
-import { DashboardHeader } from "@/components/dashboard-header";
+import { patients, todaysAppointments, clinicalAlerts } from "@/data/patients";
 
 export default function DashboardPage() {
   return (
@@ -18,7 +18,7 @@ export default function DashboardPage() {
             Here&apos;s your clinical overview for today.
           </p>
         </div>
-        <Button className="gap-1.5 rounded-md">
+        <Button className="gap-1.5 rounded-md px-4 h-9.5">
           <Plus className="h-4 w-4" />
           New Patient
         </Button>
@@ -28,7 +28,7 @@ export default function DashboardPage() {
       <div className="mb-6 grid grid-cols-4 gap-4">
         <StatsCard
           title="Total Patients"
-          value="1,248"
+          value={String(patients.length)}
           subtitle="+12 this month"
           icon={<Users className="h-[18px] w-[18px] text-primary" />}
           iconBg="bg-accent"
@@ -36,7 +36,7 @@ export default function DashboardPage() {
         />
         <StatsCard
           title="Today's Appointments"
-          value="24"
+          value={String(todaysAppointments.length)}
           subtitle="8 remaining"
           icon={<CalendarCheck className="h-[18px] w-[18px] text-secondary-foreground" />}
           iconBg="bg-secondary"
@@ -52,7 +52,7 @@ export default function DashboardPage() {
         />
         <StatsCard
           title="Critical Alerts"
-          value="3"
+          value={String(clinicalAlerts.length)}
           subtitle="Requires attention"
           icon={<TriangleAlert className="h-[18px] w-[18px] text-destructive" />}
           iconBg="bg-[#FDE8E7]"
@@ -68,20 +68,9 @@ export default function DashboardPage() {
         </div>
       </div>
       <RecentPatients/>
-
-      {/* TODO: Interns add the following sections:
-          - Today's Appointments table  (shadcn Table + Badge + Avatar)
-          - Clinical Alerts card        (Card with pastel backgrounds)
-          - Recent Patients table       (shadcn Table + Badge)
-      */}
     </div>
   );
 }
-
-// ============================================
-// REUSABLE COMPONENT — StatsCard
-// ============================================
-// Study this pattern, then build the remaining sections.
 
 function StatsCard({
   title,
