@@ -338,7 +338,7 @@ export function PatientsTable() {
                       border-b
                       border-slate-200
                       last:border-b-0
-                      hover:bg-gray-50
+                      hover:bg-background
                     "
                   >
                     {/* Patient */}

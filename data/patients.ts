@@ -2480,3 +2480,4 @@ export const clinicalAlerts: ClinicalAlert[] = [
     color: "red",
   },
 ];
+
