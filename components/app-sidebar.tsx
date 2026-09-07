@@ -25,7 +25,7 @@ export function AppSidebar() {
   const pathname = usePathname();
 
   return (
-    <Sidebar className="border-r border-border">
+    <Sidebar className="border-r border-border sm:hidden">
       <SidebarHeader className="p-5 pb-6">
         <div className="flex items-center gap-2.5">
           <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary">

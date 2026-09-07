@@ -36,8 +36,8 @@ const statusStyles = {
 
 export function RecentPatients() {
   return (
-    <Card className="h-full overflow-hidden rounded-xl border-slate-200">
-      <CardHeader className="flex flex-row items-center justify-between border-b border-slate-200 p-5">
+    <Card className="flex h-full max-h-[400px] flex-col overflow-hidden rounded-xl border-slate-200">
+      <CardHeader className="shrink-0 flex flex-row items-center justify-between border-b border-slate-200 p-5">
         <CardTitle className="font-semibold text-foreground">
           Recent Patients
         </CardTitle>
@@ -50,7 +50,7 @@ export function RecentPatients() {
         </Link>
       </CardHeader>
 
-      <CardContent className="p-0">
+      <CardContent className="min-h-0 flex-1 overflow-y-auto p-0">
         <Table>
           <TableHeader>
             <TableRow className="border-b border-slate-200 hover:bg-transparent">

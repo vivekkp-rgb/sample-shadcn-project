@@ -37,8 +37,8 @@ const statusStyles = {
 
 export function TodaysAppointments() {
   return (
-    <Card className="h-full overflow-hidden rounded-xl border-slate-200">
-      <CardHeader className="flex flex-row items-center justify-between border-b border-slate-200 p-5">
+    <Card className="flex max-h-full h-[400px] flex-col overflow-hidden rounded-xl border-slate-200">
+      <CardHeader className="shrink-0 flex flex-row items-center justify-between border-b border-slate-200 p-5">
         <CardTitle className="font-semibold text-foreground">
           Today's Appointments
         </CardTitle>
@@ -51,7 +51,7 @@ export function TodaysAppointments() {
         </Link>
       </CardHeader>
 
-      <CardContent className="p-0">
+      <CardContent className="min-h-0 flex-1 overflow-y-auto p-0">
         <Table>
           <TableHeader>
             <TableRow className="border-b border-slate-200 hover:bg-transparent">

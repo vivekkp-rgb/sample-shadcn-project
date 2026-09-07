@@ -29,51 +29,53 @@ const alertStyles = {
 
 export function ClinicalAlerts() {
   return (
-    <Card className="h-full overflow-hidden rounded-xl border-slate-200 px-5 py-4.5">
-      <CardHeader className="flex flex-row items-center justify-between">
-        <CardTitle className="mb-4 text-base font-semibold text-slate-900">
-          Clinical Alerts
-        </CardTitle>
-      </CardHeader>
+    <Card className="flex h-full max-h-[400px] flex-col overflow-hidden rounded-xl border-slate-200 px-5 py-4.5">
+  <CardHeader className="shrink-0 flex flex-row items-center justify-between">
+    <CardTitle className="mb-4 text-base font-semibold text-slate-900">
+      Clinical Alerts
+    </CardTitle>
+  </CardHeader>
 
-      <div className="flex flex-col gap-3">
-        {clinicalAlerts.map((alert) => {
-          const styles = alertStyles[alert.color];
+  <div className="min-h-0 flex-1 overflow-y-auto">
+    <div className="flex flex-col gap-3">
+      {clinicalAlerts.map((alert) => {
+        const styles = alertStyles[alert.color];
 
-          return (
-            <Card
-              key={alert.patient}
-              className={`rounded-xl border-0 ${styles.card} shadow-none`}
-            >
-              <CardContent className="p-4">
-                <div className="flex items-center gap-3">
-                  <Avatar className="h-7 w-7 bg-white">
-                    <AvatarFallback
-                      className={`bg-white ${styles.avatar} text-[11px] font-semibold`}
-                    >
-                      {alert.initials}
-                    </AvatarFallback>
-                  </Avatar>
-
-                  <span
-                    className={`text-[13px] font-medium ${styles.name}`}
+        return (
+          <Card
+            key={alert.patient}
+            className={`rounded-xl border-0 ${styles.card} shadow-none`}
+          >
+            <CardContent className="p-4">
+              <div className="flex items-center gap-3">
+                <Avatar className="h-7 w-7 bg-white">
+                  <AvatarFallback
+                    className={`bg-white ${styles.avatar} text-[11px] font-semibold`}
                   >
-                    {alert.patient}
-                  </span>
-                </div>
+                    {alert.initials}
+                  </AvatarFallback>
+                </Avatar>
 
-                <p className={`mt-2 text-[13px] ${styles.message}`}>
-                  {alert.msg}
-                </p>
+                <span
+                  className={`text-[13px] font-medium ${styles.name}`}
+                >
+                  {alert.patient}
+                </span>
+              </div>
 
-                <p className={`mt-1 text-[11px] ${styles.time}`}>
-                  {alert.time}
-                </p>
-              </CardContent>
-            </Card>
-          );
-        })}
-      </div>
-    </Card>
+              <p className={`mt-2 text-[13px] ${styles.message}`}>
+                {alert.msg}
+              </p>
+
+              <p className={`mt-1 text-[11px] ${styles.time}`}>
+                {alert.time}
+              </p>
+            </CardContent>
+          </Card>
+        );
+      })}
+    </div>
+  </div>
+</Card>
   );
 }
